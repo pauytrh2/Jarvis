@@ -1,5 +1,4 @@
-# Jarvis
-### A python voice assistant
+# A python voice assistant
 
 ------------
 
