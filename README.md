@@ -1,7 +1,5 @@
 # A python voice assistant
 
-------------
-
 ## Installation
 **1.** To install Jarvis on your machine, It first has to meet the requierments:
 -  The machine must be **LINUX**.
