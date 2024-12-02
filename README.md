@@ -15,7 +15,7 @@
 
 
 **2.** To install jarvis and run it, Paste the following code in your terminal: 
-```
+```bash
 git clone https://github.com/pauytrh2/Jarvis.git
 unzip Jarvis-main.zip
 cd Jarvis-main
