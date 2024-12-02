@@ -23,10 +23,10 @@ def listen():
             return recognizer.recognize_google(audio)
         except sr.UnknownValueError:
             print("Sorry, I did not understand that.")
-            return "¯\_(ツ)_/¯"
+            return None
         except sr.RequestError:
             print("Sorry, there was an issue with the speech recognition service.")
-            return "¯\_(ツ)_/¯"
+            return None
 
 def run_assistant():
     speak("Hello. I am your assistant. How can I help you?")
