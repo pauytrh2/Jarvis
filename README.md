@@ -1,6 +1,7 @@
 # A python voice assistant
 
 ## Installation
+
 **1.** To install Jarvis on your machine, It first has to meet the requierments:
 -  The machine must be **LINUX**.
 
@@ -12,6 +13,7 @@
 
 
 **2.** To install jarvis and run it, Paste the following code in your terminal: 
+
 ```bash
 git clone https://github.com/pauytrh2/Jarvis.git
 unzip Jarvis-main.zip
