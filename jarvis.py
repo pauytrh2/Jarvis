@@ -11,7 +11,7 @@ conversation_history = []
 def speak(text):
     subprocess.run(['festival', '--tts'], input=text, text=True)
 
-def listen_to_speech():
+def listen():
     recognizer = sr.Recognizer()
     with sr.Microphone() as source:
         recognizer.adjust_for_ambient_noise(source, duration=2)
@@ -30,7 +30,7 @@ def listen_to_speech():
             print("No speech detected in time. Please try again.")
             return ""
 
-def generate_response_with_context(prompt):
+def response(prompt):
     global conversation_history
     conversation_history.append(f"You: {prompt}")
     
@@ -44,8 +44,8 @@ def generate_response_with_context(prompt):
     return response.text
 
 while True:
-    print("Say something to the AI (say 'exit' or 'quit' to stop):")
-    speech_input = listen_to_speech()
+    print("Say something to the AI (say 'exit' or 'quit' to exit):")
+    speech_input = listen()
     
     if speech_input:
         print(f"You said: {speech_input}")
@@ -54,7 +54,7 @@ while True:
             break
         
         try:
-            response = generate_response_with_context(speech_input)
+            response = response(speech_input)
             print(f"\nAI Response: {response}\n")
             speak(response)
         except Exception as e:
