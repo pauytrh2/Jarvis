@@ -65,7 +65,7 @@ def make_readable(seconds):
 conversation_history = []
 
 def speak(text):
-    print(text)
+    # //print(text)
     subprocess.run(['festival', '--tts'], input=text, text=True)
 
 def listen(app):
@@ -78,13 +78,13 @@ def listen(app):
             app.make_popup("Recognizing...")
             return recognizer.recognize_google(audio)
         except sr.UnknownValueError:
-            print("Sorry, I couldn't understand. Please try again.")
+            # //print("Sorry, I couldn't understand. Please try again.")
             return ""
         except sr.RequestError as e:
-            print(f"API request error: {e}")
+            # //print(f"API request error: {e}")
             return ""
         except sr.WaitTimeoutError:
-            print("No speech detected in time. Please try again.")
+            # //print("No speech detected in time. Please try again.")
             return ""
 
 def response(prompt):
@@ -93,7 +93,7 @@ def response(prompt):
     if len(conversation_history) > 10:
         conversation_history.pop(0)
     conversation = "\n".join(conversation_history)
-    print("Generating AI response...")
+    # //print("Generating AI response...")
     response = model.generate_content(conversation)
     conversation_history.append(f"AI: {response.text}")
     return response.text
@@ -102,7 +102,7 @@ def listen_and_respond(app):
     while True:
         speech_input = listen(app)
         if speech_input:
-            print(f"You said: {speech_input}")
+            # //print(f"You said: {speech_input}")
             if speech_input.lower() in ["exit", "quit"]:
                 speak("Goodbye!")
                 break
