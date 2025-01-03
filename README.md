@@ -1,5 +1,7 @@
 # A python voice assistant
 
+Now with music capabilities!
+
 ## Installation
 
 **1.** To install Jarvis on your machine, It first has to meet the requierments:
@@ -18,13 +20,5 @@
 git clone https://github.com/pauytrh2/Jarvis.git
 unzip Jarvis-main.zip
 cd Jarvis-main
-python jarvis.py
+python main.py
 ```
-
-------------
-
-## Commands:
-
-- help: shows all commands
-
-what do you want more i literally gave you the command to get just what you want do it yourself.
