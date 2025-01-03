@@ -18,7 +18,6 @@ Now with music capabilities!
 
 ```bash
 git clone https://github.com/pauytrh2/Jarvis.git
-unzip Jarvis-main.zip
-cd Jarvis-main
+cd Jarvis
 python main.py
 ```
