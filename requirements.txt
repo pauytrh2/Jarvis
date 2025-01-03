@@ -1,2 +1,2 @@
-speech_recognition
-datetime
+speechrecognition
+yt-dlp
